@@ -17,7 +17,7 @@ export const Header = (props) => {
                         <div className="navbar-header">
                             <ul className="nav navbar-nav">
                                 <li><a className="navbar-brand" href="#">{props.brand}</a></li>
-                                {props.links.map((item,i) => <li key={i}><Link to={item.src} target={item.target}>{item.title}  - 'test'</Link></li>)}
+                                {props.links.map((item,i) => <li key={i}><Link to={item.src} target={item.target}>{item.title}</Link></li>)}
                             </ul>
                             <ul className="nav navbar-nav mavbar-right">
                                 {userLink}
