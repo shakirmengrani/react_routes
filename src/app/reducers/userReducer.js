@@ -1,4 +1,4 @@
-let defaultState = {name: "Shakir Mengrani",age: 24 };
+let defaultState = {};
 
 export default function reducer (state = defaultState, action)  {
     switch (action.type) {

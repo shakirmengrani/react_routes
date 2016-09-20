@@ -7,8 +7,7 @@ import { browserHistory } from 'react-router';
 
 import reducer from './reducers';
 
-const defaultState = {};
 const middleware = applyMiddleware(promise(),thunk);
-const store = createStore(reducer,defaultState,middleware);
+const store = createStore(reducer,middleware);
 export const myHistory = syncHistoryWithStore(browserHistory,store);
 export default store;

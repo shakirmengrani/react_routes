@@ -4,15 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npm run build:debug",
-    "build:debug": "webpack -d && cp src/index.html dist/index.html && webpack-dev-server --content-base src/ --hot --port 8084 --history-api-fallback",
-    "build:prod": "webpack -p && cp src/index.html dist/index.html"
+    "start": "npm run build:prod && node server",
+    "debug": "npm run build:debug",
+    "build:debug": "webpack -d --progress --colors && cp src/index.html dist/index.html && webpack-dev-server --content-base src/ --hot --port 8084 --history-api-fallback",
+    "build:prod": "webpack -p --define process.env.NODE_ENV='\"production\"' --progress --colors && cp src/index.html dist/index.html"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.14.0",
     "bootstrap": "^3.3.7",
+    "express-history-api-fallback": "^2.0.0",
+    "mqtt": "^2.0.0",
     "react": "^15.3.1",
     "react-dom": "^15.3.1",
     "react-redux": "^4.4.5",

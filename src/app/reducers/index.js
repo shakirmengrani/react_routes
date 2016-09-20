@@ -3,7 +3,11 @@ import { routerReducer } from 'react-router-redux';
 import user from './userReducer';
 import tweet from './tweetReducer';
 
-export default combineReducers({
-    user,tweet,
+const reducer = combineReducers({
+    user:user, 
+    posts:tweet,
     routing: routerReducer
 });
+
+
+export default reducer;

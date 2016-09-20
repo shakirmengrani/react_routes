@@ -20,9 +20,7 @@ class App extends React.Component{
 
     render(){
         var app = connect((store) => {
-          return {
-              user: store.user
-          }
+          return store
         });
         
         return (

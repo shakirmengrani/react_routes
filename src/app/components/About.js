@@ -6,7 +6,7 @@ export class About extends React.Component{
         super(props);
     }
     componentWillMount(){
-      this.props.dispatch(fetchUserState());     
+      // this.props.dispatch(fetchUserState());     
     }
 
     onChangeName (){
